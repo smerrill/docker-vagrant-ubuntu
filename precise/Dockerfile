@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:12.04
 MAINTAINER Steven Merrill <steven.merrill@gmail.com>
 
 # This image was adapted from
