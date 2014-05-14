@@ -8,7 +8,7 @@ MAINTAINER Steven Merrill <steven.merrill@gmail.com>
 # much of this was gleaned from https://github.com/lxc/lxc/blob/lxc-0.8.0/templates/lxc-ubuntu.in
 
 # we're going to want this bad boy installed so we can connect :)
-RUN apt-get update
+RUN apt-get update -y
 
 # Install many common packages.
 # rsync and openssh-clients are needed for Vagrant.
