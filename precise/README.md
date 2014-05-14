@@ -1,7 +1,9 @@
 ## vagrant-ubuntu
 
-These are _monolithic_ Docker images (e.g. they runs /sbin/init) that run sshd.
+This is a _monolithic_ Docker image (e.g. it runs /sbin/init) that runs sshd.
 Because of this, it is possible to use all Vagrant provisioners with them.
+
+This image runs Ubuntu 12.04 LTS.
 
 This is not really the way Docker is meant to be used, but it does result in
 configuration management testing with almost no overhead that can be used on a
@@ -11,8 +13,7 @@ wide variety of cloud platforms.
 
     Vagrant.configure("2") do |config|
       config.vm.provider "docker" do |d, override|
-        # Use tag :latest or remove the :12.04 to get 14.04 LTS.
-        d.image = "smerrill/vagrant-ubuntu:12.04"
+        d.image = "smerrill/vagrant-ubuntu"
         d.has_ssh = true
     
         # This is needed if you have non-Docker provisioners in the Vagrantfile.
