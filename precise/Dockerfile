@@ -3,7 +3,8 @@ MAINTAINER Steven Merrill <steven.merrill@gmail.com>
 
 # Update libselinux so that sshd will work on hosts with newer libselinux
 # (such as Fedora.)
-RUN add-apt-repository ppa:ariel-wikimedia/ppa && \
+RUN apt-get install python-software-properties && \
+    add-apt-repository ppa:ariel-wikimedia/ppa && \
     apt-get update && \
     apt-get install -y libselinux1
 
